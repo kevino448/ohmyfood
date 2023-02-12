@@ -1,71 +1,143 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
+*,
 ::before,
-::after{
+::after {
     box-sizing: border-box;
-    
+
 }
-body{
-    margin: 0;
-    font-family: "Roboto",sans-serif;
-}
-header{
+
+body {
+    margin:0;
     font-family: 'Roboto', sans-serif;
+}
+
+header {
+    font-family: 'Shrikhand',cursive;
     text-align: center;
-    padding: O.3rem;
+    padding: 0.3rem;
+    box-shadow: 0 0 0.5rem rgb(0 0 0 /25%);
     margin: 0;
     position: relative;
+}
+header>img{
+    width: 50%;
+}
 
+a {
+    text-decoration: none;
+    color: inherit;
 }
-main{
-    padding: 0 1rem;
+
+h3,
+p {
+    margin: 0;
 }
-main .city{
+
+main {
+    padding: 0 0px;
+    max-width: 1300px;
+    margin:112px auto ;
+}
+
+
+.city {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    background-color: #f3f3f3;
+    background-color: #eae8e8;
     text-align: center;
     padding: 0.5rem;
-}
-main .city i{
-    font-size: 1.5rem;
-}
-/*Explorer  */
-.explorer{
-text-align: center;
 
 }
-.explorer h2{
-    margin-top: 1rem;
+
+main .city i {
+    font-size: 1.5rem;
+}
+
+/*Explorer  */
+.explorer {
+    text-align: center;
+    background-color: whitesmoke;
+    margin-block-start: -7rem;
+    width: 100%;
+    height: 20rem;
+
+}
+.loader{
+    display: grid;
+    place-items: center;
+    position: fixed;
+    background-color: #ffffff;
+    height: 100vh;
+    inset: 0;
+    z-index: 1;
+    opacity: 0.9;
+    animation: disappear 200ms 3s forwards;
+    transform-origin: top;
+}
+.fa-spin::after{
+    content: "";
+    animation: spin 3s;
+    height: 100px;
+    width: 100px;
+    border: 5px solid transparent;
+    border-top: 5px solid blue;
+   
+}
+@keyframes disappear{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scaleX(0);
+    }
+}
+@keyframes spin{
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.explorer h2 {
+    margin-top: 2rem;
     font-size: 2rem;
+    padding: 2rem;
 }
-.explorer p{
-    font-size: 1rem;
+
+.explorer p {
+    font-size: 1.5rem;
 }
-.explorer button{
+
+.explorer button {
     color: white;
     font-weight: 300;
     font-size: 1.5rem;
     padding: 1rem 2rem;
     border: none;
     border-radius: 2rem;
-    box-shadow: 2px 1px 16px -3px #000000;
-    background-image:-moz-linear-gradient(to top, rgba(147,84,220),rgba(255,121,218));
+    box-shadow: 2px 1px 8px -3px #000000;
+    background-image: linear-gradient(to top, #9356DC, #FF79DA);
     transition: all 200ms;
-    opacity: 0.9;
-    margin-top: 0.5rem;
+
+    margin-top: 1rem;
 
 }
-.explorer button:hover{
+
+.explorer button:hover {
     transform: scale(1.02);
+    opacity: 0, 0;
 }
+
 /*Fonctionnement*/
+.tuto{
+    margin-left: 4%;
+    width: 94%;
+}
 
 
-.tuto li{
+.tuto li {
     position: relative;
     list-style-type: none;
     background-color: #f6f6f6;
@@ -74,27 +146,31 @@ text-align: center;
     border-radius: 1rem;
     box-shadow: 2px 1px 16px -3px #000000;
 }
-.tuto ol{
+
+.tuto ol {
     counter-reset: steps;
     display: flex;
     gap: 2rem;
 }
-.tuto h2{
+
+.tuto h2 {
     margin-left: 40px;
 }
-.tuto li i{
-    margin-right: 1rem;
-}
-.tuto li:hover{
+
+
+
+.tuto li:hover {
     transform: scale(1.02);
 }
-.tuto li i.fas{
+
+.tuto li i {
     margin-right: 1rem;
-    color: #f2f2f2f2;
+    color: #7c7c7c;
     font-size: 1.5rem;
 }
-.tuto li::before{
-    content:counter(steps);
+
+.tuto li::before {
+    content: counter(steps);
     counter-increment: steps;
     color: white;
     background-color: #9356dc;
@@ -104,12 +180,224 @@ text-align: center;
     place-items: center;
     border-radius: 50px;
     position: absolute;
-    bottom: 1rem;
+    top: 50%;
     left: -1rem;
-}
-@media screen and (max-width:1000px){
-    .tuto ol{
-        flex-direction: column;
-    }
+    transform: translateY(-50%);
 }
 
+/*RESTAURANT*/
+
+.cardmenu {
+    background-color: white;
+    border-radius: 16px;
+    width: 35%;
+
+}
+
+.list-cardmenu {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: space-around;
+    margin-bottom: 16px;
+}
+.list-cardmenu h3,p{
+    margin-left: 10px;
+}
+
+article>img {
+    border-radius: 16px 16px 0 0;
+    height: 140px;
+    width: 100%;
+    object-position: top;
+}
+
+
+.blocmenu {
+    gap: 48px;
+    background-color:rgb(248,248,248);
+    padding: 22px;
+    border-radius: 16px;
+    margin-top: 10%;
+    width: 96%;
+}
+
+
+.Icon {
+    position: relative;
+}
+
+.Icon i {
+    font-size: 1.5rem;
+    position: absolute;
+    right: 1rem;
+    top: -2rem;
+
+}
+
+.list-cardmenu .Icon .fa-sharp {
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: 0;
+    transition: all 200ms ease-in-out;
+    background-image: linear-gradient(to top, #9356DC, #FF79DA);
+}
+
+.list-cardmenu .cardmenu:hover .fa-sharp {
+    opacity: 1;
+
+}
+
+.titreTuto {
+    margin-left: 10%;
+}
+
+
+.list-cardmenu .New {
+
+    position: relative;
+}
+
+.New::before {
+    content: 'Nouveau';
+    position: absolute;
+    margin-right: 15%;
+    height: 2rem;
+    width: 4rem;
+    display: flex;
+    background-color: #99E2D0;
+    color: rgb(0, 139, 63);
+    place-items: center;
+    right: -3rem;
+    top: 0.5rem;
+}
+
+
+/*Footer*/
+footer {
+    background-color: rgb(47, 45, 45);
+    padding: 1rem 2rem;
+    color: white;
+    
+}
+
+footer>h2 {
+    font-weight: 500;
+    padding: 1rem 0;
+    font-family: "shrikhand", sans-serif;
+   
+}
+
+footer>p {
+    padding: 0.2rem;
+   
+}
+
+main>footer {
+    margin-block-start: 100%;
+    width: 100%;
+}
+
+/*Responsive*/
+@media (max-width:768px) {
+    
+    .city {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        background-color: #eae8e8;
+        text-align: center;
+        padding: 0.5rem;
+
+    }
+    .loader{
+        display: grid;
+        place-items: center;
+        position: fixed;
+        background-color: #ffffff;
+        height: 100vh;
+        inset: 0;
+        z-index: 1;
+        opacity: 0.9;
+        animation: disappear 200ms 3s forwards;
+        transform-origin: top;
+    }
+    .fa-spin::after{
+        content: "";
+        animation: spin 3s;
+        height: 100px;
+        width: 100px;
+        border: 5px solid transparent;
+    }
+    .list-cardmenu .New {
+
+        position: relative;
+    }
+    header>img{
+        width: 30%;
+    }
+    
+    
+    .New::before {
+        content: 'Nouveau';
+        position: absolute;
+        margin-right: 20%;
+        height: 2rem;
+        width: 4rem;
+        display: flex;
+        background-color: #99E2D0;
+        color: rgb(0, 139, 63);
+        place-items: center;
+        right: -3rem;
+        top: 0.5rem;
+    }
+
+    .explorer {
+        text-align: center;
+        background-color: whitesmoke;
+        width: 100%;
+        height: 26rem;
+    }
+    .tuto{
+        width: 96%;
+    }
+
+    .tuto > ol {
+        flex-direction: column;
+        width: 85%;
+    }
+
+    .blocmenu>* {
+        flex-direction: column;
+        height: auto;
+
+    }
+
+    .blocmenu {
+        width: 100%;
+        margin-left: 0%;
+    }
+    .cardmenu{
+        width: 80%;
+    }
+
+
+    .blocmenu .list-cardmenu {
+        width: 100%;
+    }
+    
+main {
+    padding: 0 0px;
+    max-width: 1300px;
+    margin:111px auto ;
+}
+
+   
+    footer{
+    width: 100%;
+
+    }
+}

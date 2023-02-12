@@ -11,8 +11,5 @@
     "url": "C:Users/von kevinbeck/Desktop/ohmyfood/.git/"
   },
   "author": "kevin MVOGO",
-  "license": "ISC",
-  "devDependencies": {
-    "sass": "^1.56.1"
-  }
+  "license": "ISC"
 }

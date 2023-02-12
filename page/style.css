@@ -1,0 +1,381 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
+*
+::before,
+::after {
+    box-sizing: border-box;
+
+}
+
+header {
+    font-family: 'Shrikhand',cursive;
+    text-align: center;
+    width: 100%;
+    margin-left: 0;
+    height: 36vh;
+}
+body {
+    margin:0;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header>.iconNav {
+    position: relative;
+    top: 5rem;
+    font-size: 20px;
+    width: 1%;
+    margin-left: 25%;
+}
+
+header>img {
+    position: relative;
+    top: 2rem;
+    width: 25%;
+    margin-left: 10%;
+}
+header {
+    text-align: center;
+    width: 100%;
+    margin-left: 8px;
+    height: 36vh;
+}
+.iconNav::before {
+    position: absolute;
+    transition: 0.5ms;
+}
+.iconNav:hover {
+    transform: scale(1.5) translate(0);
+}
+
+footer {
+    background-color: rgb(47, 45, 45);
+    padding: 1rem 2rem;
+    color: white;
+    margin: -8px;
+    
+}
+
+footer>h2 {
+    font-weight: 500;
+    padding: 1rem 0;
+    font-family: "shrikhand", sans-serif;
+}
+
+footer>p {
+    padding: 0.2rem;
+}
+
+/*Menu resto1*/
+.barner img {
+    display: block;
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    object-position: center ;
+    background-color: grey;
+}
+
+main>h {
+    font-family: 'Roboto', sans-serif;
+    margin-left: 3rem;
+}
+.bacgrisResto h2{
+    background-color:whitesmoke;
+    padding: 2rem 1rem;
+    position: relative;
+    border-radius: 1rem 1rem 0 0;
+    width: 99%;
+    margin-left: -9px;
+    
+}
+
+.icon {
+    position: relative;
+}
+
+.icon i {
+    font-size: 1.5rem;
+    position: absolute;
+    right: 1rem;
+    top: -5rem;
+    
+}
+
+.bacgrisResto .icon .fa-sharp {
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: 0;
+    transition: all 200ms ease-in-out;
+    background-image: linear-gradient(to top, rgba(147, 84, 220), rgba(255, 121, 218));
+}
+
+.bacgrisResto .icon:hover .fa-sharp {
+    opacity: 1;
+}
+
+.icon {
+    padding: 1rem 0.5rem;
+}
+
+.wraper {
+    padding: 0 0.5rem;
+}
+
+.bacgrisResto {
+    padding: 1rem 1rem;
+    margin-top: 1rem;
+    border-radius: 2rem 2rem 0 0;
+    background-color: whitesmoke;
+    margin: -8px;
+    margin-top: -5%;
+}
+.bacgrisResto>h2{
+    font-family:'shrikhand', sans-serif; 
+}
+
+
+.menus {
+    
+    gap: 1rem;
+    display: grid;
+}
+
+.menus {
+   
+    font-weight: 400;
+}
+
+
+.menus .menu__category {
+    
+    background-color: white;
+    display: flex;
+    border-radius: 1rem;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 2px 1px 8px -3px #000;
+    animation: Appear 1s;
+    
+}
+
+
+.menu-items p,
+h3 {
+    padding: 0;
+    margin: 0;
+    
+}
+
+.menus h3 {
+   
+    font-weight: 400;
+    position: relative;
+    
+}
+.menu-items h3{
+    font-weight: bold;
+}
+
+.menus h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 1.5rem;
+    height: 0.25rem;
+    width: 4rem;
+    background-color: #99E2D0;
+}
+
+.menu__category .menu-items {
+    border-radius: 1rem;
+    margin-left: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.menu__category .menu-items h3 {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.menu__category .menu-items p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.menu__category .menu-item__prix {
+    font-size: 1rem;
+    margin-left: auto;
+    font-weight: 900;
+    padding: 0.5rem;
+    display: flex;
+    align-items: flex-end;
+    margin-right: 2rem;
+
+}
+
+.menu__category .menu-item__check {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    background-color: #99E2D0;
+    margin-right: -5rem;
+    border-radius: 0 1rem 1rem 0;
+    transition: all 0.5s;
+    width: 2.5rem;
+    height: 3rem;
+    padding: 0.5rem;
+}
+
+.menu-item__check i {
+    display: grid;
+    place-items: center;
+    background: white;
+    width: 1.1rem;
+    border-radius: 1rem;
+    color: #99E2D0;
+
+}
+
+.menu__category:hover .menu-item__check  {
+    margin: 0;
+}
+
+.menu__category:hover .menu-item__check i {
+    animation: quarter-spin 0.5s ease-in-out;
+}
+
+/*button commander*/
+.command {
+    text-align: center;
+}
+
+.command button {
+    color: white;
+    font-weight: 300;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 2rem;
+    box-shadow: 2px 1px 8px -3px #000000;
+    background-image: linear-gradient(to top, rgba(147, 84, 220), rgba(255, 121, 218));
+    transition: all 200ms;
+    margin-top: 1rem;
+}
+
+.command button:hover {
+    transform: scale(1.02);
+    opacity: 0, 0;
+}
+
+@keyframes quarter-spin {
+    0% {
+        transform: rotate(-270deg);
+    }
+    
+    100% {
+        transform: rotate(0);
+    }
+}
+
+@keyframes Appear {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+@media (max-width:768px) {
+    .menus {
+        grid-template-columns: 1fr;
+    }
+    .wraper{
+        padding: 0 0.5rem;
+    }
+}
+
+@media (max-width:768px) {
+
+    header {
+        text-align: center;
+        width: 100%;
+        margin-left: 8px;
+        height: 25vh;
+    }
+    .iconNav::before {
+        position: absolute;
+        transition: 0.5ms;
+    }
+    
+    .iconNav:hover {
+        transform: scale(1.5) translate(0);
+    }
+    
+    .iconNav>i{
+        display: flex;
+        align-items:flex-start;
+        width: 100%;
+        margin-inline-start: -75px;
+        
+    }
+   
+    header>.iconNav {
+        position: relative;
+        top: 5rem;
+        font-size: 20px;
+        width: 1%;
+        margin-left: 25%;
+    }
+    
+ 
+    header>img {
+        position: relative;
+        top: 3.5rem;
+        width: 45%;
+        margin-left: 10%;
+    }
+    .bacgrisResto {
+        padding: 1rem 1rem;
+        margin-top: 1rem;
+        border-radius: 2rem 2rem 0 0;
+        background-color: rgb(248, 248, 248);
+        margin: -8px;
+        margin-top: -16%;
+        width: 96%;
+        margin-left: -7px;
+    }
+    .bacgrisResto h2{
+        background-color:rgb(248, 248,248);
+        padding: 2rem 1rem;
+        position: relative;
+        border-radius: 2rem 2rem 0 0;
+        width: 100%;
+        margin-left: -4%;
+    }
+    .barner img {
+        display: block;
+        width: 104%;
+        margin-left: -8px;
+        height: 35vh;
+        object-fit: cover;
+        object-position: center ;
+        background-color: grey;
+    }
+
+}
