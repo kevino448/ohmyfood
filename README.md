@@ -1,9 +1,9 @@
 ---
-#Ohmyfood
+#ohmyfood
 
-This is the third project of openclassrooms
+This is third project of openclassrooms
 
-https://openclassrooms.com/fr/paths/556/projects/637/assignment
+https://github.com/kevino448/ohmyfood
 ---
 
-Technologies used: HTML,CSS
+Technologies used:HTML,CSS
